@@ -60,5 +60,9 @@ class MainActivity : BaseActivity() {
             ToastUtils.showShort("退出登录成功")
             SPUtils.getInstance().remove(ConfigConstants.SP_IS_LOGIN)
         }
+        btn_random_number.setOnClickListener {
+            ARouter.getInstance().build(ConfigConstants.VERIFICATION_PATH)
+                .navigation()
+        }
     }
 }

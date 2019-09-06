@@ -27,4 +27,6 @@ public final class ConfigConstants {
     public static final String NO_INTERCEPT_PATH = BASE_PATH + "no_intercept";
     //需要登录的actvity
     public static final String INTERCEPT_PATH = BASE_PATH + "intercept";
+    //图片验证码activity
+    public static final String VERIFICATION_PATH = BASE_PATH + "verification";
 }

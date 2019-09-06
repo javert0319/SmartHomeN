@@ -1,11 +1,12 @@
 package com.hope.smarthome.base
 
 import android.app.Application
+import cn.leo.magic.screen.MagicScreenAdapter
 import com.alibaba.android.arouter.launcher.ARouter
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.Utils
 import com.hope.smarthome.constants.ConfigConstants
-import com.umeng.socialize.PlatformConfig
+import com.hope.smarthome.utils.DensityUtils
 
 /**
  * @ClassName: App
@@ -30,5 +31,7 @@ class App : Application(){
             .setConsoleSwitch(ConfigConstants.IS_DEBUG)// 设置是否输出到控制台开关，默认开
             .setGlobalTag(ConfigConstants.TAG)// 设置 log 全局标签，默认为空.
             .setSingleTagSwitch(false)// 一条日志仅输出一条，默认开，为美化 AS 3.1.0 的 Logcat`
+        MagicScreenAdapter.initDesignWidthInDp(360)
+        DensityUtils.setup(this)
     }
 }

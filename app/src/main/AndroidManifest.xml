@@ -20,7 +20,6 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -36,7 +35,8 @@
         </activity>
 
         <!-- 友盟分享 start -->
-        <!--<activity
+        <!--
+        <activity
                 android:name="com.tencent.tauth.AuthActivity"
                 android:launchMode="singleTask"
                 android:noHistory="true">
@@ -84,9 +84,12 @@
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
-        </activity>-->
+        </activity>
+        -->
         <!-- 友盟分享 end -->
 
+        <activity android:name=".ui.ValidationActivity">
+        </activity>
     </application>
 
 </manifest>
