@@ -90,6 +90,10 @@
 
         <activity android:name=".ui.ValidationActivity">
         </activity>
+        <activity android:name=".drawerlayout.DrawerLayoutActivity">
+        </activity>
+        <activity android:name=".kotlin.ui.HighOrderActivity">
+        </activity>
     </application>
 
 </manifest>

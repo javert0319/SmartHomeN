@@ -29,4 +29,9 @@ public final class ConfigConstants {
     public static final String INTERCEPT_PATH = BASE_PATH + "intercept";
     //图片验证码activity
     public static final String VERIFICATION_PATH = BASE_PATH + "verification";
+    //侧滑抽屉样式
+    public static final String DRAWERLAYOUT_PATH = BASE_PATH + "drawerlayout";
+    //Kotlin进阶
+    public static final String HIGH_ORDER_PATH = BASE_PATH + "high_order";
+
 }

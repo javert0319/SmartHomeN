@@ -14,7 +14,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.hope.smarthome"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -28,7 +28,8 @@ android {
         }
         debug {
             buildConfigField("boolean", "IS_DEBUG", "true")
-
+            buildConfigField "String", "HTTP_IP", "\"http://deve.nbhope.cn:8889/\""
+            buildConfigField "int", "HTTP_PORT", "8889"
         }
     }
 
@@ -68,7 +69,11 @@ dependencies {
     implementation 'com.blankj:utilcode:1.20.4'
 
     implementation 'com.github.jarryleo:MagicScreenAdapter:v1.5'
+    implementation 'io.card:android-sdk:5.5.1'
 
+    implementation 'com.android.support:design:27.1.1'
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
     /* 友盟 start *//*
     // common
     implementation 'com.umeng.umsdk:common:2.1.0'

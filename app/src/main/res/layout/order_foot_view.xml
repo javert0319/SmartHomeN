@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="1dp"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/tv_foot_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="永远不要去责怪你人生里的任何人，好的人给你快乐，坏的人给你经历，最差的人给你教训，最好的人给你回忆。"
+            android:textSize="18sp"/>
+</LinearLayout>

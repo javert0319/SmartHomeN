@@ -3,6 +3,7 @@ package com.hope.smarthome.ui
 import android.os.Bundle
 import com.alibaba.android.arouter.launcher.ARouter
 import com.blankj.utilcode.util.*
+import com.hope.smarthome.BuildConfig
 import com.hope.smarthome.R
 import com.hope.smarthome.base.BaseActivity
 import com.hope.smarthome.constants.ConfigConstants
@@ -17,6 +18,7 @@ class MainActivity : BaseActivity() {
     private val chineseNumber = ChineseNumber()
 
     private val calendar = Calendar()
+    private var baseUrl = "http://192.168.2.9:8080/"
 
     override fun initVarAndView(savedInstanceState: Bundle?) {
         setContentView(R.layout.activity_main)
@@ -39,6 +41,18 @@ class MainActivity : BaseActivity() {
         LogUtils.i(ConfigConstants.TAG,"MainActivity numberToChinese $week")
 
         LogUtils.i(ConfigConstants.TAG,"MainActivity numberToChinese $weekZeller")
+
+        val baseUrl = BuildConfig.HTTP_IP
+        LogUtils.i(ConfigConstants.TAG,"MainActivity numberToChinese $baseUrl")
+    }
+
+    fun setBaseUrl(baseUrl: String) :String{
+        if (baseUrl.startsWith("http://") || baseUrl.startsWith("https://")) {
+            this.baseUrl = baseUrl
+        } else {
+            this.baseUrl = "http://$baseUrl/"
+        }
+        return this.baseUrl
     }
 
     override fun initEvent() {
@@ -64,5 +78,14 @@ class MainActivity : BaseActivity() {
             ARouter.getInstance().build(ConfigConstants.VERIFICATION_PATH)
                 .navigation()
         }
+        btn_drawer.setOnClickListener {
+            ARouter.getInstance().build(ConfigConstants.DRAWERLAYOUT_PATH)
+                .navigation()
+        }
+        btn_high_order.setOnClickListener {
+            ARouter.getInstance().build(ConfigConstants.HIGH_ORDER_PATH)
+                .navigation()
+        }
+
     }
 }
